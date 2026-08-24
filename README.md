@@ -1,8 +1,15 @@
 # TicketBook — Ticket Booking System
 
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
 A full-stack ticket booking platform for movies and concerts with real-time seat maps, TTL-based seat holds, automatic waitlist assignment, and QR-code email tickets.
 
-**Live demo:** _Add your Vercel URL here_  
+> 🚀 **Live Demo:** [ticket-booking-seven-gold.vercel.app](https://ticket-booking-seven-gold.vercel.app/)
+
 **Tech stack:** Next.js 15 · Supabase (Postgres + Auth + Realtime + Edge Functions + pg_cron) · Resend (email) · Vercel
 
 ---
