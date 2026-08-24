@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #f84464;
+  --color-brand-dark: #d63356;
+  --color-surface: #1a1a24;
+  --color-surface-2: #24242f;
+  --color-surface-3: #2e2e3a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3a3a4a; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #f84464; }
+
+/* Toast slide-in */
+@keyframes slide-up {
+  from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+  to   { transform: translateX(-50%) translateY(0);   opacity: 1; }
+}
+.animate-slide-up { animation: slide-up 0.3s ease forwards; }
+
+/* Shimmer skeleton */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #1a1a24 25%, #24242f 50%, #1a1a24 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Seat glow for selected */
+@keyframes seat-glow {
+  0%, 100% { filter: drop-shadow(0 0 4px #f84464aa); }
+  50%       { filter: drop-shadow(0 0 8px #f84464); }
+}
+.seat-selected { animation: seat-glow 1.5s ease-in-out infinite; }
+
+/* Page fade-in */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fade-in-up 0.4s ease forwards; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #f84464, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Brand button */
+.btn-brand {
+  background: linear-gradient(135deg, #f84464, #e0294a);
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(248, 68, 100, 0.35);
+}
+.btn-brand:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(248, 68, 100, 0.5);
+}
+.btn-brand:active { transform: translateY(0); }
+.btn-brand:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
